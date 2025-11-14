@@ -97,52 +97,24 @@ case definitions and study designs, allowing more direct comparisons between dat
 Cause Hierarchy
 +++++++++++++++
 
+.. image:: ckd_cause_hierarchy.svg
+
+**Simplified hierarchy:**
+
 - All causes (c_294)
 
   - Communicable, maternal, neonatal, and nutritional diseases (c_295)
 
     - **Chronic kidney disease (c_589)**
 
-      - Chronic kidney disease due to diabetes mellitus type 1 (c_997)
+.. note::
 
-        - Albuminuria (stages 1-2) due to diabetes mellitus type 1 (s_5540)
-        - Stage 3 chronic kidney disease due to diabetes mellitus type 1 (s_5225, s_5228, s_5231, s_5234)
-        - Stage 4 chronic kidney disease due to diabetes mellitus type 1 (s_5249, s_5252, s_5255, s_5258)
-        - Stage 5 chronic kidney disease due to diabetes mellitus type 1 (s_5273, s_5276, s_5279, s_5282)
-
-      - Chronic kidney disease due to diabetes mellitus type 2 (c_998)
-
-        - Albuminuria (stages 1-2) due to diabetes mellitus type 2 (s_5543)
-        - Stage 3 chronic kidney disease due to diabetes mellitus type 2 (s_5219, s_5222)
-        - Stage 4 chronic kidney disease due to diabetes mellitus type 2 (s_5243, s_5246)
-        - Stage 5 chronic kidney disease due to diabetes mellitus type 2 (s_5267, s_5270)
-
-      - Chronic kidney disease due to hypertension (c_999)
-
-        - Albuminuria (stages 1-2) due to hypertension (s_5546)
-        - Stage 3 chronic kidney disease due to hypertension (s_5213, s_5216)
-        - Stage 4 chronic kidney disease due to hypertension (s_5237, s_5240)
-        - Stage 5 chronic kidney disease due to hypertension (s_5261, s_5264)
-
-      - Chronic kidney disease due to glomerulonephritis (c_1000)
-
-        - Albuminuria (stages 1-2) due to glomerulonephritis (s_5549)
-        - Stage 3 chronic kidney disease due to glomerulonephritis (s_1024, s_1025, s_1026, s_1027)
-        - Stage 4 chronic kidney disease due to glomerulonephritis (s_1433, s_1436, s_1439, s_1430)
-        - Stage 5 chronic kidney disease due to glomerulonephritis (s_1385, s_1388, s_1391, s_1382)
-
-      - Chronic kidney disease due to other and unspecified causes (c_1001)
-
-        - Albuminuria (stages 1-2) due to other and unspecified causes (s_5552)
-        - Stage 3 chronic kidney disease due to other and unspecified causes (s_1016, s_1017, s_1018, s_1019)
-        - Stage 4 chronic kidney disease due to other and unspecified causes (s_1421, s_1424, s_1427, s_1418)
-        - Stage 5 chronic kidney disease due to other and unspecified causes (s_1373, s_1376, s_1379, s_1370)
-
-      - End-stage renal disease (c_1002)
-
-        - Maintenance dialysis due to end-stage renal disease (s_5201, s_5204)
-        - Kidney transplant due to end-stage renal disease (s_5207, s_5210)
-        - Other and unspecified chronic kidney disease (s_1032, s_1033, s_1034, s_1035, s_1445, s_1448, s_1451, s_1442, s_1397, s_1400, s_1403, s_1394, s_504, s_505, s_501, s_502, s_507, s_508)
+   **Underlying etiology subcauses in GBD 2023:** GBD 2023 models CKD with underlying etiology subcauses including
+   diabetes mellitus type 1 (c_997), diabetes mellitus type 2 (c_998), hypertension (c_999), glomerulonephritis
+   (c_1000), other and unspecified causes (c_1001), and end-stage renal disease (c_1002). Each subcause includes
+   sequelae for the different CKD stages (albuminuria/stages 1-2, stage 3, stage 4, stage 5) and ESRD includes
+   sequelae for dialysis and transplantation. These underlying etiologies may be utilized in future Vivarium models
+   if etiology-specific modeling is required for a particular project.
 
 Severity Distribution
 +++++++++++++++++++++
@@ -411,7 +383,7 @@ Data Sources
    * - sequelae_c589
      - gbd_mapping
      - List of sequelae for chronic kidney disease
-     - See cause hierarchy for complete sequelae list
+     - Includes all CKD stage sequelae across all underlying etiologies
    * - prevalence_s{sid}
      - como
      - Prevalence of sequela with id {sid}
