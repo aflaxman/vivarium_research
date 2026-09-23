@@ -230,6 +230,21 @@ The below will show using all of these in practice:
   ], axis=1)
   data1.head()
 
+Inspecting value pipelines
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Many of these values are built up by *value pipelines* that several components
+contribute to: one component provides the source of the value, and others attach
+modifiers to it. Starting with :code:`vivarium-engine` 5.10, :code:`sim.get_attribute()`
+returns the pipeline object itself, and printing it shows the pipeline's source,
+combiner, modifiers, and post-processors, which is very helpful when debugging. The
+following worked example demonstrates this on the model from the tutorial:
+
+.. toctree::
+   :maxdepth: 1
+
+   inspecting_pipelines
+
 .. _interactive_setup_5:
 
 Step 5: Taking a Step Forward 
